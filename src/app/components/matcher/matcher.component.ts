@@ -11,7 +11,22 @@ import { MatButtonModule } from '@angular/material/button';
   styleUrl: './matcher.component.css'
 })
 export class MatcherComponent {
+  matcher = {
+    heading: 'Dreaming of a furry friend to help your skin glow?',
+    paragraph: 'Beauty & Beasts believes your perfect skincare companion might be wagging its tail! Our unique app matches your skin type to the ideal dog breed, providing tailored care advice for both you and your furry friend.',
+    instructions: '<strong>First, identify Your Skin Type:</strong> Select the option that best describes your skin from the choices below. <strong>Then, find your Perfect Match:</strong>  Once you’ve chosen your skin type, click the "Find My Dog Match" button. <strong>Lastly, explore your Dog Profile:</strong> Discover the dog breed that best complements your skin!',
+    homeLogo: 'assets/matcher-home-logo.png',
+    quizMatcherIntro:'Ready to embark on this paw-some journey? Let\'s find your perfect furry match!',
+    combination: 'Combination Skin',
+    dry: 'Dry Skin',
+    normal: 'Normal Skin',
+    oily: 'Oily Skin',
+    sensitive: 'Sensitive Skin',
+    match: 'Find My Dog Match'
+  };
+
   selectedSkinType: string = '';
+
   skinTypeImages = {
     dry: 'assets/dry-skin.png',
     oily: 'assets/oily-skin.png',
@@ -19,6 +34,7 @@ export class MatcherComponent {
     normal: 'assets/normal-skin.png',
     sensitive: 'assets/sensitive-skin.png'
   };
+
   defaultImage = 'assets/matcher-home.png';
   skinTypeDescriptions = {
     dry: 'Dry skin, often feeling tight, rough, and flaky, requires extra care. Beauty & Beasts can help you find the perfect furry friend to complement your dry skin!',
