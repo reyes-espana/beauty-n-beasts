@@ -31,6 +31,9 @@ export interface Breed{
         image: string;
 }
 
-export interface SkinType{
-        skinType:string;
-}
+// export interface selectedSkinType{
+//         oily: string;
+//         dry: string;
+//         combination: string;
+//         sensitivie: string;
+// }

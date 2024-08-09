@@ -10,7 +10,7 @@ export const routes: Routes = [
     {path: '', component:HomeComponent},
     {path: 'about', component:AboutComponent},
     {path: 'matcher', component:MatcherComponent},
-    {path: 'matcherresult/:skinType', component:MatcherResultComponent},
+    {path: 'matcherresult/:selectedSkinType', component:MatcherResultComponent},
     {path: 'dogfinder', component:DogfinderComponent},
     {path: 'dogdetails/:dogId', component:DogdetailsComponent},
 ];
