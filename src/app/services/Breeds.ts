@@ -30,3 +30,7 @@ export interface Breed{
         index: number;
         image: string;
 }
+
+export interface SkinType{
+        skinType:string;
+}
