@@ -1,11 +1,14 @@
-<p>matcherresult works!</p>
-<div class="matcherresult">
+<div class="matcherresult" *ngIf="getSkinTypeMatch(selectedSkinType).length > 0">
     <h2>{{selectedSkinType}} skin</h2>
-    <div class="carousel-wrapper">
-        <div class="dog">
-            <img mat-card-xl-image src=""/> 
-         </div>
-    </div>
+    <ngx-slick-carousel
+    class="carousel"
+    #slickModal="slick-carousel"
+    [config]="slideConfig"
+  >        <div class="dog" *ngFor="let dog of getSkinTypeMatch(selectedSkinType)" ngxSlickItem >
+                <img mat-card-xl-image src="{{dog.image_link}}"/> 
+                <p>{{dog.name}}</p>
+            </div>
+        </ngx-slick-carousel>
     <div>
         <p>This is your best match!</p>
         <p>hahahaha</p>
