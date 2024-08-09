@@ -48,7 +48,7 @@
     </div>
   </div>
    <div class="matcher-router-button">
-  <button mat-raised-button [disabled]="!selectedSkinType" >
+  <button mat-raised-button [disabled]="!selectedSkinType" [routerLink]="['/matcherresult', selectedSkinType]">
     Find My Dog Match
   </button> </div>
 </div>

@@ -6,6 +6,7 @@ import { DogdetailsComponent } from './components/dogdetails/dogdetails.componen
 import { DogfinderComponent } from './components/dogfinder/dogfinder.component';
 import { HomeComponent } from './components/home/home.component';
 import { MatcherComponent } from './components/matcher/matcher.component';
+import { MatcherResultComponent } from './components/matcherresult/matcherresult.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { BreedService } from './services/breeds.service';
@@ -23,6 +24,7 @@ import { DogHeightPipe } from './pipes/dog-height.pipe';
     HomeComponent,
     AboutComponent,
     MatcherComponent,
+    MatcherResultComponent,
     DogfinderComponent,
     DogdetailsComponent,
     DogHeightPipe,
@@ -35,6 +37,5 @@ export class AppComponent {
 
   ngOnInit() {
     this.breedService.getAllDogBreeds();
-    this.breedService.getAllDry();
   }
 }
