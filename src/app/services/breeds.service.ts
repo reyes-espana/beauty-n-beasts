@@ -80,13 +80,6 @@ export class BreedService {
       };
     };
 
-  //   if(oilyDogs.length === 0){
-  //   for(let i=0; i< oilyDogs.length-1 ; i++){
-  //     if(oilyDogs[i].shedding <= 4 && oilyDogs[i].drooling <=3  ){
-  //     result.push(oilyDogs[i]);
-  //   }
-  //   } 
-  // }
     return result;
     }
     
@@ -104,14 +97,7 @@ export class BreedService {
         result.push(dryDogs[i]);
       };
     };
-  
-    //   if(oilyDogs.length === 0){
-    //   for(let i=0; i< oilyDogs.length-1 ; i++){
-    //     if(oilyDogs[i].shedding <= 4 && oilyDogs[i].drooling <=3  ){
-    //     result.push(oilyDogs[i]);
-    //   }
-    //   } 
-    // }
+
     return result;
   };
 
@@ -129,13 +115,6 @@ export class BreedService {
         result.push(sensitiveDogs[i]);
       };
     };
-      //   if(oilyDogs.length === 0){
-      //   for(let i=0; i< oilyDogs.length-1 ; i++){
-      //     if(oilyDogs[i].shedding <= 4 && oilyDogs[i].drooling <=3  ){
-      //     result.push(oilyDogs[i]);
-      //   }
-      //   } 
-      // }
     return result;
   };
 
@@ -156,15 +135,6 @@ export class BreedService {
     return result;
   };
 
-  getAllDry(){
-    let allDryDogs = [];
-    let array = this.getAllDogsInfo();
-    for(let i=0; i< array.length-1; i++){
-      if(array[i].shedding === 2 && (array[i].drooling ===4 ||array[i].drooling ===5)){
-        allDryDogs.push(array[i]);
-      };
-    };
-    return allDryDogs;
-  };
+
           
 }

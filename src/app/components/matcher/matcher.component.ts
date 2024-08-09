@@ -1,11 +1,14 @@
 import { Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
+import { RouterModule } from '@angular/router';
+
 
 @Component({
   selector: 'app-matcher',
   standalone: true,
   imports: [
-    MatButtonModule
+    MatButtonModule,
+    RouterModule,
   ],
   templateUrl: './matcher.component.html',
   styleUrl: './matcher.component.css'
