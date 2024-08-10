@@ -25,7 +25,11 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
 })
 export class MatcherResultComponent {
   selectedSkinType: string = '';
+  showSecondTierMatches = false;
 
+  onMoreMatchesClick() {
+    this.showSecondTierMatches = true;
+  }
   constructor(private breedService: BreedService, private route: ActivatedRoute) {}
 
   ngOnInit() {
@@ -36,6 +40,11 @@ export class MatcherResultComponent {
   dryDogs: BreedInfo[] = this.breedService.getDry();
   comboDogs: BreedInfo[] = this.breedService.getCombo();
   sensitiveDogs: BreedInfo[] = this.breedService.getSensitive();
+
+  oilyDogs2: BreedInfo[] = this.breedService.getOily2();
+  dryDogs2: BreedInfo[] = this.breedService.getDry2();
+  comboDogs2: BreedInfo[] = this.breedService.getCombo2();
+  sensitiveDogs2: BreedInfo[] = this.breedService.getSensitive2();
   
   getSkinTypeMatch(selectedSkinType: string): BreedInfo[] {
     switch (selectedSkinType) {
@@ -47,6 +56,21 @@ export class MatcherResultComponent {
         return this.comboDogs;
       case "sensitive":
         return this.sensitiveDogs;
+      default:
+        return [];
+    }
+  }
+
+  getSecondTier(selectedSkinType: string): BreedInfo[] {
+    switch (selectedSkinType) {
+      case "oily":
+        return this.oilyDogs2;
+      case "dry":
+        return this.dryDogs2;
+      case "combination":
+        return this.comboDogs2;
+      case "sensitive":
+        return this.sensitiveDogs2;
       default:
         return [];
     }
