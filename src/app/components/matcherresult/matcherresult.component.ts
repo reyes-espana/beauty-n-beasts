@@ -1,7 +1,7 @@
 import { Component,NgModule, OnInit } from '@angular/core';
 import { BreedService } from '../../services/breeds.service';
 import { NgFor, NgIf } from '@angular/common';
-
+import { MatProgressBarModule } from '@angular/material/progress-bar'
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { ActivatedRoute, RouterModule } from '@angular/router';
@@ -14,6 +14,7 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
   standalone: true,
   imports: [
     MatCardModule,
+    MatProgressBarModule,
     NgFor, 
     NgIf,
     RouterModule,

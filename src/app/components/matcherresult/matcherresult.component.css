@@ -8,3 +8,20 @@
     justify-content: center;
 
 } */
+
+
+button{
+    position: relative;
+    float: right; 
+   font-size: 1.3em;
+    font-weight: 400;
+    background-color: #EFA59D; 
+    border-radius: 2em;
+    cursor: pointer;
+    padding: 1em;
+}
+
+button:hover{
+    background-color: #0C4559; 
+    color: #EFA59D;
+}
