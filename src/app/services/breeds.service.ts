@@ -66,51 +66,37 @@ export class BreedService {
   }
 
   getOily(){
-    let oilyDogs = [];
     let result = [];
-     let array = this.getAllDogsInfo();
-      for(let i=0; i< array.length-1; i++){
-        if(array[i].shedding + array[i].grooming + array[i].drooling ===8){
-        oilyDogs.push(array[i]);
-      }
-    } 
-    for(let i=0; i< oilyDogs.length-1 ; i++){
-      if(oilyDogs[i].shedding === 4 && oilyDogs[i].drooling ===3){
-        result.push(oilyDogs[i]);
+    let array = this.getAllDogsInfo(); 
+    for(let i=0; i< array.length-1 ; i++){
+      if(array[i].shedding === 4 || array[i].shedding === 5 && array[i].drooling ===3){
+        result.push(array[i]);
       };
     };
 
     return result;
-    }
+  };
 
-    getOily2(){
-      let result = [];
-       let array = this.getAllDogsInfo();
-      for(let i=0; i< array.length-1 ; i++){
-        if(array[i].shedding <= 4 && array[i].drooling <= 3){
-          result.push(result[i]);
-        };
+  getOily2(){
+    let result = [];
+    let array = this.getAllDogsInfo();
+    for(let i=0; i< array.length-1 ; i++){
+      if(array[i].shedding <= 4 && array[i].drooling <= 3){
+        result.push(result[i]);
       };
-  
-      return result;
-      }
+    };
+  return result;
+  };
     
     
   getDry(){
-    let dryDogs = [];
     let result = [];
     let array = this.getAllDogsInfo();
-    for(let i=0; i< array.length-1; i++){
-      if(array[i].shedding + array[i].grooming + array[i].drooling ===9){
-        dryDogs.push(array[i]);
+    for(let i=0; i< array.length-1 ; i++){
+      if(array[i].shedding === 2 && array[i].drooling ===4 || array[i].drooling === 5){
+        result.push(array[i]);
       };
     };
-    for(let i=0; i< dryDogs.length-1 ; i++){
-      if(dryDogs[i].shedding === 2 && dryDogs[i].drooling ===4){
-        result.push(dryDogs[i]);
-      };
-    };
-
     return result;
   };
 
@@ -127,17 +113,11 @@ export class BreedService {
     }
 
   getSensitive(){
-    let sensitiveDogs = [];
     let result = [];
     let array = this.getAllDogsInfo();
-    for(let i=0; i< array.length-1; i++){
-      if(array[i].shedding + array[i].grooming + array[i].drooling ===6){
-        sensitiveDogs.push(array[i]);
-      };
-    };
-    for(let i=0; i< sensitiveDogs.length-1 ; i++){
-      if(sensitiveDogs[i].shedding === 1 && sensitiveDogs[i].drooling ===1){
-        result.push(sensitiveDogs[i]);
+    for(let i=0; i< array.length-1 ; i++){
+      if(array[i].shedding === 1 && array[i].drooling ===1){
+        result.push(array[i]);
       };
     };
     return result;
@@ -156,17 +136,11 @@ export class BreedService {
     }
 
   getCombo(){
-    let comboDogs = [];
     let result = [];
     let array = this.getAllDogsInfo();
-    for(let i=0; i< array.length-1; i++){
-      if(array[i].shedding + array[i].grooming + array[i].drooling ===7){
-        comboDogs.push(array[i]);
-      }
-    } 
-    for(let i=0; i<comboDogs.length-1 ; i++){
-      if(comboDogs[i].shedding === 3 && comboDogs[i].drooling ===2  ){
-        result.push(comboDogs[i]);
+    for(let i=0; i<array.length-1 ; i++){
+      if(array[i].shedding === 3 && array[i].drooling ===2){
+        result.push(array[i]);
       };
     };
     return result;
@@ -180,8 +154,7 @@ export class BreedService {
         result.push(result[i]);
       };
     };
-
     return result;
-    }
+  }
           
 }
