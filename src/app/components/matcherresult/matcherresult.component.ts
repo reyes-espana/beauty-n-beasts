@@ -1,36 +1,86 @@
 import { Component,NgModule, OnInit } from '@angular/core';
 import { BreedService } from '../../services/breeds.service';
-import { NgFor } from '@angular/common';
-
+import { NgFor, NgIf } from '@angular/common';
+import { MatProgressBarModule } from '@angular/material/progress-bar'
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
-import { RouterModule } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
+import { BreedInfo } from '../../services/Breeds';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
+
 
 @Component({
   selector: 'app-matcherresult',
   standalone: true,
   imports: [
     MatCardModule,
+    MatProgressBarModule,
     NgFor, 
+    NgIf,
     RouterModule,
+    SlickCarouselModule
   ],
   templateUrl: './matcherresult.component.html',
   styleUrl: './matcherresult.component.css'
 })
 export class MatcherResultComponent {
-  constructor(private breedService: BreedService) {}
+  selectedSkinType: string = '';
+  showSecondTierMatches = false;
+
+  onMoreMatchesClick() {
+    this.showSecondTierMatches = true;
+  }
+  constructor(private breedService: BreedService, private route: ActivatedRoute) {}
 
   ngOnInit() {
-    this.breedService.getOily();
-    this.breedService.getDry();
-    this.breedService.getCombo();
-    this.breedService.getSensitive();    
+    this.selectedSkinType = this.route.snapshot.params['selectedSkinType'];   
   }
 
-  selectedSkinType: string = '';
+    oilyDogs: BreedInfo[] = this.breedService.getOily();
+  dryDogs: BreedInfo[] = this.breedService.getDry();
+  comboDogs: BreedInfo[] = this.breedService.getCombo();
+  sensitiveDogs: BreedInfo[] = this.breedService.getSensitive();
 
-
-  onSkinTypeSelected(skinType: string){
-    this.selectedSkinType = skinType
+  oilyDogs2: BreedInfo[] = this.breedService.getOily2();
+  dryDogs2: BreedInfo[] = this.breedService.getDry2();
+  comboDogs2: BreedInfo[] = this.breedService.getCombo2();
+  sensitiveDogs2: BreedInfo[] = this.breedService.getSensitive2();
+  
+  getSkinTypeMatch(selectedSkinType: string): BreedInfo[] {
+    switch (selectedSkinType) {
+      case "oily":
+        return this.oilyDogs;
+      case "dry":
+        return this.dryDogs;
+      case "combination":
+        return this.comboDogs;
+      case "sensitive":
+        return this.sensitiveDogs;
+      default:
+        return [];
+    }
   }
+
+  getSecondTier(selectedSkinType: string): BreedInfo[] {
+    switch (selectedSkinType) {
+      case "oily":
+        return this.oilyDogs2;
+      case "dry":
+        return this.dryDogs2;
+      case "combination":
+        return this.comboDogs2;
+      case "sensitive":
+        return this.sensitiveDogs2;
+      default:
+        return [];
+    }
+  }
+
+  slideConfig = {
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: true,
+    infinite: true,
+  };
+
 }
