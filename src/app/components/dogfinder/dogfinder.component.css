@@ -7,7 +7,24 @@
 
 }
 
- 
+button {
+    background-color: rgb(247, 247, 247);
+    color: black;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border: 0cap;
+    border-radius: 3em;
+  }
+  
+  img {
+    margin: 0 2em 0 2em;
+    border-radius: 3em;
+}
+
   .grid-container {
     list-style: none; /* Remove default list style */
     padding: 0; /* Remove default padding */
@@ -23,10 +40,10 @@
   }
   
   .dog-profile {
-    background-color: #fff; /* Set background color for cards */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
-    border-radius: 5px; /* Add rounded corners */
-    overflow: hidden; /* Clip content within card boundaries */
+    background-color: rgb(247, 247, 247);
+    width: 90%;
+    border-radius: 3em;
+    margin: 0 auto; /* Center the card horizontally */
   }
   
   .mat-card-title {
@@ -38,10 +55,18 @@
     display: flex; /* Enable flexbox for image layout */
     align-items: center; /* Align image vertically within card */
     justify-content: center; /* Center image horizontally */
-    height: 200px; /* Set image container height (adjust as needed) */
+    height: 250px; /* Set image container height (adjust as needed) */
   }
   
   .mat-card-xl-image {
     width: 100%; /* Stretch image to fill container width */
     object-fit: cover; /* Maintain aspect ratio and crop if necessary */
+    margin: 0 2em 0 2em;
+    border-radius: 3em;
+  }
+  .dog-grid img {
+    border-radius: 3em;
+  }
+.mat-mdc-card mdc-card{
+    background-color: pink;
   }
