@@ -36,7 +36,7 @@ export class MatcherResultComponent {
     this.selectedSkinType = this.route.snapshot.params['selectedSkinType'];   
   }
 
-    oilyDogs: BreedInfo[] = this.breedService.getOily();
+  oilyDogs: BreedInfo[] = this.breedService.getOily();
   dryDogs: BreedInfo[] = this.breedService.getDry();
   comboDogs: BreedInfo[] = this.breedService.getCombo();
   sensitiveDogs: BreedInfo[] = this.breedService.getSensitive();
