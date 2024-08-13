@@ -55,7 +55,6 @@ this.search("")
             });
     }
   };
-  console.log(allBreeds)
   return allBreeds
 }
 }
