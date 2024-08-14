@@ -1,42 +1,50 @@
-<div class="matcherresult" *ngIf="getSkinTypeMatch(selectedSkinType).length > 0">
-    <h2>{{selectedSkinType}} skin</h2>
-    <ngx-slick-carousel
+<div
+  class="matcher-result"
+  *ngIf="getSkinTypeMatch(selectedSkinType).length > 0"
+>
+<div class="matcher-result-heading">
+  <h1>{{ selectedSkinType }} skin</h1>
+  <div *ngIf="getSkinTypeMatch(selectedSkinType).length > 1" >
+    <p>These are your best matches!</p>
+  </div>
+  <div class="router-buttons">
+  <button mat-raised-button [routerLink]="['/matcherresult', selectedSkinType]">Back to Matcher</button>
+  <button mat-raised-button [routerLink]="['/matcherresult', selectedSkinType]">Find Other Dogs</button>
+</div>
+</div>
+<div>
+<div class="carousel-buttons">
+<button mat-icon-button class="slick-prev-arrow" (click)="slickModal.slickPrev()">
+  <mat-icon>arrow_back</mat-icon>
+</button>
+<span>spacer</span>
+<button mat-icon-button class="slick-next-arrow" (click)="slickModal.slickNext()">
+  <mat-icon>arrow_forward</mat-icon></button>
+</div>
+
+  <ngx-slick-carousel
     class="carousel"
     #slickModal="slick-carousel"
     [config]="slideConfig"
-  >        <div class="dog" *ngFor="let dog of getSkinTypeMatch(selectedSkinType)" ngxSlickItem >
-                <img mat-card-xl-image src="{{dog.image_link}}"/> 
-                <p>{{dog.name}}</p>
-                <div *ngIf="getSkinTypeMatch(selectedSkinType).length > 1">  <p>These are your best matches!</p>
-                </div>
-                <div *ngIf="getSkinTypeMatch(selectedSkinType).length === 1">  <p>This is your best match!</p>
-                </div>
-                <div class="dog-stats">
-                    <mat-card class="stat-card">
-                        <mat-card-title>Breed Traits & Characteristics</mat-card-title>
-                        <mat-card-header>Barking</mat-card-header>
-                            <mat-progress-bar mode="determinate" value="{{dog.barking}}"></mat-progress-bar>
-                        <mat-card-header>Coat Length</mat-card-header>
-                            <mat-progress-bar mode="determinate" value="{{dog.coat_length}}"></mat-progress-bar>
-                        <mat-card-header>Drooling</mat-card-header>
-                            <mat-progress-bar mode="determinate" value="{{dog.drooling}}"></mat-progress-bar>
-                        <mat-card-header>Energy</mat-card-header>
-                            <mat-progress-bar mode="determinate" value="{{dog.energy}}"></mat-progress-bar>
-                        <mat-card-header>Grooming</mat-card-header>
-                            <mat-progress-bar mode="determinate" value="{{dog.grooming}}"></mat-progress-bar>
-                        <mat-card-header>Playfulness</mat-card-header>
-                            <mat-progress-bar mode="determinate" value="{{dog.playfulness}}"></mat-progress-bar>
-                        <mat-card-header>Protectiveness</mat-card-header>
-                            <mat-progress-bar mode="determinate" value="{{dog.protectiveness}}"></mat-progress-bar>
-                        <mat-card-header>Good with children</mat-card-header>
-                            <mat-progress-bar mode="determinate" value="{{dog.good_with_children}}"></mat-progress-bar>
-                        <mat-card-header>Good with other dogs</mat-card-header>
-                            <mat-progress-bar mode="determinate" value="{{dog.good_with_other_dogs}}"></mat-progress-bar>
-                    </mat-card>
-                </div>
-            </div>
-        </ngx-slick-carousel>
-        <button >More Pets</button>
-
-    
+  >
+    <div
+      class="dog-profile"
+      *ngFor="let dog of getSkinTypeMatch(selectedSkinType)"
+      ngxSlickItem
+    >
+      <div class="dog-card-container">
+        <mat-card class="dog-card">
+       
+         
+          <mat-card-title>{{ dog.name }}</mat-card-title>
+          <div class="image-container"> 
+          <img mat-card-xl-image src="{{ dog.image_link }}" /></div>
+          <div *ngIf="getSkinTypeMatch(selectedSkinType).length === 1">
+            <mat-card-subtitle>This is your best match!</mat-card-subtitle>
+          </div>
+          <mat-card-subtitle class="skin-informaton">{{ dog | dogAttributes }} </mat-card-subtitle>
+        </mat-card>
+      </div>
+    </div>
+  </ngx-slick-carousel>
 </div>
