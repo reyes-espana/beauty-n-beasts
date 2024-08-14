@@ -1,0 +1,109 @@
+.finder-heading {
+  padding: 0.75em;
+  font: 3.5em "Bodoni Moda";
+  background-color: #0c4559;
+  text-align: center;
+  color: #8bde8b;
+}
+
+button {
+  background-color: rgb(247, 247, 247);
+  color: black;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border: 0cap;
+  border-radius: 3em;
+}
+
+img {
+  margin: 0 2em 0 2em;
+  border-radius: 3em;
+}
+
+.grid-container {
+  list-style: none; /* Remove default list style */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+}
+
+.dog-grid {
+  display: grid; /* Enable grid layout */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Responsive grid with minimum width 300px */
+  grid-gap: 10px; /* Spacing between cards */
+  margin: 0;
+  padding: 0;
+}
+
+.dog-profile {
+  background-color: rgb(247, 247, 247);
+  width: 90%;
+  border-radius: 3em;
+  margin: 0 auto; /* Center the card horizontally */
+}
+
+.mat-card-title {
+  padding: 10px; /* Adjust padding for content spacing */
+  font-weight: bold; /* Make breed name stand out */
+}
+
+.dog-card-container {
+  display: flex; /* Enable flexbox for image layout */
+  align-items: center; /* Align image vertically within card */
+  justify-content: center; /* Center image horizontally */
+  height: 250px; /* Set image container height (adjust as needed) */
+}
+
+.mat-card-xl-image {
+  width: 100%; /* Stretch image to fill container width */
+  object-fit: cover; /* Maintain aspect ratio and crop if necessary */
+  margin: 0 2em 0 2em;
+  border-radius: 3em;
+}
+.dog-grid img {
+  border-radius: 3em;
+}
+.mdc-card {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.dog-grid button mat-card {
+  padding: 0; /* Remove default padding */
+}
+
+li {
+  list-style-type: none;
+}
+
+h1 {
+  font: 4em Elsie;
+}
+
+.search-bar-container {
+  display: flex;
+  justify-content: center;
+
+  
+}
+/* Hover Effect */
+button:hover {
+    box-shadow: 0 0 10px #0c4559; /* Add blue glow on hover */
+  }
+
+  .search-bar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3em;
+   
+
+  }
+  
+
