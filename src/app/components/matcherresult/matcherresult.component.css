@@ -1,21 +1,107 @@
-.matcherresult{
-
+.matcher-result{
+    padding-bottom: 2em;
+    margin: 0;
+    background-image: url('../../../assets/matcher-background.png');
+   background-size: center;
+   background-repeat: no-repeat;
+   box-sizing: border-box;
+   position: relative;
+   overflow: hidden;
+   
 }
-/* 
-.carousel{
+.matcher-result-heading {
+    background-image: linear-gradient(#e7e7e7, #f7f7f7);
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    p {
+    text-align: center;
+    font: 1.2em 'Open Sans';
+}
+}
+
+.router-buttons {
     display: flex;
-    align-items: center; 
     justify-content: center;
 
-} */
+    button {
+           font-size: 1.3em;
+            font-weight: 400;
+            background-color: #EFA59D; 
+            border-radius: 2em;
+            cursor: pointer;
+            padding: 1em;
+            margin: 1em;
+    }
 
+    button:hover {
+        background-color: #0C4559; 
+        color: #EFA59D;
+}
+}
+
+h1 {
+    text-transform: capitalize;
+    text-align: center;
+    padding-top: .5em;
+    font: 3em Elsie;
+}
+
+span {
+    color: transparent;
+}
+
+.dog-card {
+    background-color: #0C4559;
+    width: fit-content;
+    padding: 2em 4em 4em 4em;
+    border-radius: 3em;
+    margin: 0 auto;
+     
+}
+
+.dog-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+mat-card-title{
+    text-align: center;
+    padding: 0 1em 1em 1em;
+    font: 2em 'Open Sans';
+    font-weight: 700;
+    color: #f7f7f7;
+}
+
+.dog-container {
+    padding: 2em;
+}
+
+.dog-card img {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    border-radius: 3em;
+    width: 650px;
+    height: auto;
+    padding-bottom: 20px;
+}
+
+ mat-card-subtitle {
+    color: #f7f7f7;
+    z-index: 0;
+    text-align: center;
+    font: 400 1.15em 'Open Sans';
+   
+}
 
 button{
     position: relative;
     float: right; 
    font-size: 1.3em;
     font-weight: 400;
-    background-color: #EFA59D; 
+    background-color: #e4e4e4;
     border-radius: 2em;
     cursor: pointer;
     padding: 1em;
@@ -25,3 +111,13 @@ button:hover{
     background-color: #0C4559; 
     color: #EFA59D;
 }
+
+.carousel-buttons{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5px;
+}
+
+.slick-prev-arrow:hover, .slick-next-arrow:hover {
+    background-color: #0c4459c8;
+  }

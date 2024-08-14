@@ -92,9 +92,9 @@
     border-radius: 2em;
     cursor: pointer;
     padding: 1em;
-}
-
-.matcher-router-button button:hover {
+    
+    button:hover {
     background-color: #0C4559; 
     color: #EFA59D;
+}
 }

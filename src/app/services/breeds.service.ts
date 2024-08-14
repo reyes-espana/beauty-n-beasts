@@ -155,5 +155,15 @@ export class BreedService {
     };
     return result;
   }
-          
-}
+
+  getNormal(){
+    let result = [];
+    let array = this.getAllDogsInfo();
+    for(let i=0; i< 7; i++){
+      let randomDog = array[(Math.floor(Math.random() * array.length))]
+      result.push(randomDog)
+    }
+    return result;
+      }; 
+    
+    };

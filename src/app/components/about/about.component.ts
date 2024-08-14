@@ -37,7 +37,7 @@ export class AboutComponent {
     slidesToShow: 1,
     slidesToScroll: 1,
     dots: true,
-    infinite: true,
+    infinite: true
   };
   addSlide() {
     this.slides.push();
