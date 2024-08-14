@@ -73,7 +73,6 @@ export class BreedService {
         result.push(array[i]);
       };
     };
-
     return result;
   };
 
