@@ -1,29 +1,39 @@
 <!-- <mat-toolbar color="primary"> -->
-  <h1 class="finder-heading">What's Your Perfect Pup?
-  </h1>
-  <span class="spacer"></span>
-  <!-- <button (click)="search('')">pets</button> -->
+<h1 class="finder-heading">What's Your Perfect Pup?</h1>
+<span class="spacer"></span>
+<!-- <button (click)="search('')">pets</button> -->
 <!-- </mat-toolbar> -->
-
+<h1>
+  Looking for a canine companion that won't irritate your skin? Search now to
+  find the perfect hypoallergenic pup.
+</h1>
+<!-- <div class="dimmed-overlay" *ngIf="!isTyping">
+</div> -->
+<div class="search-bar-container">
 <mat-form-field>
-  <input matInput type="text" [(ngModel)]="searchText" placeholder="Search for a dog breed">
+  <input
+    matInput
+    type="text"
+    [(ngModel)]="searchText"
+    (focus)="isTyping = true" (blur)="isTyping = false"
+    placeholder="Search for a dog breed"
+  />
 </mat-form-field>
-
-
-<div *ngIf="searchText" class="dog-grid">
-    <li *ngFor="let breed of search(searchText)">
-      <button [routerLink]="['/dogdetails', breed.index]">
-        <div class="dog-profile">
-          <mat-card-title>{{breed.name}}</mat-card-title>
-          <div class="dog-card-container">
-            <mat-card>
-              <mat-card-title-group>
-                <img mat-card-xl-image src="{{breed.image}}" />
-              </mat-card-title-group>
-            </mat-card>
-          </div>
-        </div>
-      </button>
-    </li>
 </div>
 
+<div *ngIf="searchText" class="dog-grid">
+  <li *ngFor="let breed of search(searchText)">
+    <button [routerLink]="['/dogdetails', breed.index]">
+      <div class="dog-profile">
+        <mat-card-title>{{ breed.name }}</mat-card-title>
+        <div class="dog-card-container">
+          <mat-card>
+            <mat-card-title-group>
+              <img mat-card-xl-image src="{{ breed.image }}" />
+            </mat-card-title-group>
+          </mat-card>
+        </div>
+      </div>
+    </button>
+  </li>
+</div>

@@ -16,6 +16,7 @@ import { CommonModule } from '@angular/common';
 import { BreedInfo, Breed } from '../../services/Breeds';
 import { RouterLink } from '@angular/router';
 
+
 @Component({
  selector: 'app-dogfinder',
  standalone: true,
@@ -36,6 +37,7 @@ import { RouterLink } from '@angular/router';
 export class DogfinderComponent {
   private dogsjson = JSON.parse(JSON.stringify(dogsData));
  //allDogs: Breed[] = this.breedService.getAllDogBreeds();
+ isTyping = false;
  searchText: string = "";
 
  ngOnInit() {
