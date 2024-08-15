@@ -2,8 +2,9 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Router, provideRouter } from '@angular/router';
 import { routes } from '../../app.routes';
 import { Location } from '@angular/common';
-
 import { MatcherComponent } from './matcher.component';
+import { ActivatedRoute } from '@angular/router';
+import { of } from 'rxjs'
 
 describe('MatcherComponent', () => {
   let component: MatcherComponent;
@@ -13,7 +14,12 @@ describe('MatcherComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MatcherComponent]
+      imports: [
+        MatcherComponent
+      ],
+      providers: [
+        { provide: ActivatedRoute, useValue: { params: of({}) } }, provideRouter(routes) 
+      ]
     })
     .compileComponents();
     
@@ -94,14 +100,25 @@ describe('MatcherComponent', () => {
   })
 
   it('should route to the matcher results page', async () => {
-    const buttonContainer = fixture.debugElement.nativeElement.querySelector('.matcher-router-button');
-    const button = buttonContainer.querySelector('button');
+    const skinButtonContainer = fixture.debugElement.nativeElement.querySelector('.matcher-selections-container');
+    const buttons = skinButtonContainer.querySelectorAll('button');
+    const normalButton = buttons[2]; 
 
-    button.click()
-
-    await fixture.whenStable();
-    
+    normalButton.click();
     fixture.detectChanges();
-    expect(location.path()).toBe('/matcher-results');
+    await fixture.whenStable();
+  
+    const buttonContainer = fixture.debugElement.nativeElement.querySelector('.matcher-router-button');
+    const findMatchButton = buttonContainer.querySelector('button');
+  
+    
+    expect(findMatchButton.disabled).toBeFalse();
+   
+    findMatchButton.click();
+  
+    await fixture.whenStable(); 
+    fixture.detectChanges();
+  
+    expect(location.path()).toBe('/matcherresult/normal');
   });
 });
