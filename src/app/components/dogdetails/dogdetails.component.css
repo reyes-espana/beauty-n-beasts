@@ -1,12 +1,11 @@
 .dog-title {
-    background-color: #0C4559;
+    background-image: linear-gradient(#e7e7e7, #f7f7f7);
 }
 
 h1 {
     text-align: center;
     padding: .75em;
-    font: 3.5em 'Bodoni Moda';
-    color: #8BDE8B;
+    font: 3em Elsie;
 }
 .dog-profile {
     display: flex;
@@ -26,7 +25,7 @@ h1 {
   }
 
 mat-card{
-    background-color: rgb(247, 247, 247);
+    background-color: #0C4559;
     height: 40rem !important;
 }
 
@@ -40,6 +39,7 @@ mat-card-title{
     padding: 1em;
     font: 1.5em 'Open Sans';
     font-weight: 700;
+    color: #f7f7f7;
 }
 
 img {
@@ -58,7 +58,7 @@ mat-card-subtitle {
     text-align: center;
     font: 1.2em 'Open Sans';
     font-weight: 500;
-    color: #333;
+    color: #f7f7f7;
 }
 
 .dog-stats {
@@ -80,7 +80,7 @@ mat-card-header {
     margin: 0 0 5px 3em;
     align-self: start;
     font: 1em 'Open Sans';
-    color: #333;
+    color: #f7f7f7;
     font-weight: 500;
 }
 

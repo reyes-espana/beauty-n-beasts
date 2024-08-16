@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { DogfinderComponent } from './dogfinder.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('DogfinderComponent', () => {
   let component: DogfinderComponent;
@@ -8,18 +8,10 @@ describe('DogfinderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DogfinderComponent ] // Include the component in declarations
-    })
-    .compileComponents();
-
-    fixture = TestBed.createComponent(DogfinderComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges(); // Detect initial changes
-  });
-
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [DogfinderComponent]
+      imports: [
+        DogfinderComponent,
+        BrowserAnimationsModule
+      ]
     })
     .compileComponents();
     
