@@ -20,7 +20,28 @@ describe('DogfinderComponent', () => {
     fixture.detectChanges();
   });
 
+
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  // it('should search for dogs based on the search text', () => {
+  //   const mockDogsData = [
+  //     { name: 'Labrador Retriever', image_link: "https://api-ninjas.com/images/dogs/labrador_retriever.jpg" }
+  //   ];
+
+  //   // Mock the dogsjson property
+  //   spyOnProperty(component, 'dogsjson', 'get').and.returnValue({ default: mockDogsData });
+
+  //   const searchTerm = 'lab';
+  //   component.search(searchTerm);
+
+  //   const expectedResults = [
+  //     { name: 'Labrador Retriever', index: 267, image: 'https://api-ninjas.com/images/dogs/labrador_retriever.jpg' }
+  //   ];
+
+  //   expect(component.search(searchTerm)).toEqual(expectedResults);
+  // });
+
+
 });

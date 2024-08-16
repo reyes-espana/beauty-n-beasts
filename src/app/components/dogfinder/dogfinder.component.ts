@@ -35,7 +35,8 @@ import { RouterLink } from '@angular/router';
  styleUrl: './dogfinder.component.css'
 })
 export class DogfinderComponent {
-  private dogsjson = JSON.parse(JSON.stringify(dogsData));
+
+  public dogsjson = JSON.parse(JSON.stringify(dogsData));
  //allDogs: Breed[] = this.breedService.getAllDogBreeds();
  isTyping = false;
  searchText: string = "";
@@ -57,6 +58,7 @@ this.search("")
             });
     }
   };
+  console.log(allBreeds)
   return allBreeds
 }
 }

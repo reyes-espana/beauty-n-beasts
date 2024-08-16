@@ -1,14 +1,14 @@
 .finder-heading {
   padding: 0.75em;
   font: 3.5em "Bodoni Moda";
-  background-color: #0c4559;
+  background-color: rgb(247, 247, 247);
   text-align: center;
-  color: #8bde8b;
+  color: black;;
 }
 
 button {
-  background-color: rgb(247, 247, 247);
-  color: black;
+  background-color:  #0c4559;
+  color: white;
   padding: 15px 25px;
   text-align: center;
   text-decoration: none;
@@ -42,7 +42,7 @@ img {
 }
 
 .dog-profile {
-  background-color: rgb(247, 247, 247);
+  background-color:#0c4559 ;
   width: 90%;
   border-radius: 3em;
   margin: 0 auto; /* Center the card horizontally */
