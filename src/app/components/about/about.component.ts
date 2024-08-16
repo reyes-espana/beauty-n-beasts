@@ -30,7 +30,7 @@ export class AboutComponent {
     {
       title: 'Behind the Algorithm',
       content:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et sapien ac arcu commodo eleifend. Suspendisse vehicula elit nisi, sed blandit quam lacinia in. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat nunc a ipsum mattis euismod. Nunc non tellus in neque aliquam efficitur sed nec ex. In libero quam, tempus sit amet mi eu, gravida semper lorem. Sed lacinia fringilla eros semper mattis. Vivamus vitae dictum enim. Nam finibus, nibh sed cursus volutpat, ante massa aliquam neque, blandit porttitor augue ligula id sem. Mauris porta nisi vel semper faucibus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus dignissim euismod libero, feugiat malesuada libero auctor sed.',
+        'To match you with your future best friend we chose to prioritize a few factors that affect different skin types, including grooming, shedding, and drooling. Based on research from our in-house dermatologists and veterinarians, we learned that high shedding dogs can leave fur and dander around the home, which might contribute to dry skin irritation if not cleaned regularly. We also learned that drooling can add unwanted moisture to the skin, which might be helpful or irritating depending on how the skin reacts to extra moisture. And lastly regular and gentle grooming is essential to minimize skin irritation caused by loose fur and dander. Based on this information we scored the different skin types within these 3 categories as well as gave a cumulative score and found furry friends that matched these scores. ',
     },
   ];
   slideConfig = {
