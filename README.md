@@ -35,5 +35,5 @@ This app is the collective effort of brilliant engineers who value pets and skin
 * [Courtlyn Boykin](https://github.com/courtlyncodes)
 * [Daniela Reyes](https://github.com/drespana)
 * [Jazmin Tweedle](https://github.com/jrtweedle1)
-* [Sarai Escobar](https://github.com/saraiesco)
+* [Sarai Escobar](https://github.com/saraiee17)
 * [Zoe Michaux](https://github.com/zoemx)
